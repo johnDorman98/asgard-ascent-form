@@ -1,0 +1,13 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+}

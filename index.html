@@ -9,7 +9,7 @@
       href="./assets/icons/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
@@ -49,35 +49,67 @@
             journey into the Great Unknown begins here.
           </p>
         </header>
-        <!-- Form CTA  -->
-        <h3>Begin the Ascent</h3>
-        <form action="">
-          <!--Seeker Designation (personal name) -->
-          <fieldset>
-            <legend>Seeker Designation</legend>
-            <label for="name">NAME</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name">
-            <label for="last-name">LAST NAME</label>
-            <input type="text" name="last-name" id="last-name" placeholder="Enter your last name">
-          </fieldset>
-          <!-- Transmission Link (contact information) -->
-          <fieldset>
-            <legend>Transmission Link</legend>
-            <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email">
-            <label for="phone-number">PHONE NUMBER</label>
-            <input type="tel" name="phone-number" id="phone-number">
-          </fieldset>
-          <!-- Bifrost Key (passwords) -->
-          <fieldset>
-            <legend>Bifrost Key</legend>
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" id="password">
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input type="password" name="confirm-password" id="confirm-password">
-          </fieldset>
-          <button type="submit">Initiate Ascent</button>
-        </form>
+        <div class="form-card">
+          <!-- Form CTA  -->
+          <h3>Begin the Ascent</h3>
+          <form action="">
+            <!--Seeker Designation (personal name) -->
+            <fieldset>
+              <legend>Seeker Designation</legend>
+              <label for="name">NAME</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+              />
+              <label for="last-name">LAST NAME</label>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Enter your last name"
+              />
+            </fieldset>
+            <!-- Transmission Link (contact information) -->
+            <fieldset>
+              <legend>Transmission Link</legend>
+              <label for="email">EMAIL</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+              />
+              <label for="phone-number">PHONE NUMBER</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                placeholder="Enter your phone number"
+              />
+            </fieldset>
+            <!-- Bifrost Key (passwords) -->
+            <fieldset>
+              <legend>Bifrost Key</legend>
+              <label for="password">PASSWORD</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                placeholder="Confirm your password"
+              />
+            </fieldset>
+            <button type="submit">Initiate Ascent</button>
+          </form>
+        </div>
       </section>
     </main>
   </body>

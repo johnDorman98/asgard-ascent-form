@@ -55,20 +55,26 @@
           <!--Seeker Designation (personal name) -->
           <fieldset>
             <legend>Seeker Designation</legend>
-            <label for="">NAME</label>
-            <label for="">LAST NAME</label>
+            <label for="name">NAME</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Enter your last name">
           </fieldset>
           <!-- Transmission Link (contact information) -->
           <fieldset>
             <legend>Transmission Link</legend>
-            <label for="">EMAIL</label>
-            <label for="">PHONE NUMBER</label>
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email">
+            <label for="phone-number">PHONE NUMBER</label>
+            <input type="tel" name="phone-number" id="phone-number">
           </fieldset>
           <!-- Bifrost Key (passwords) -->
           <fieldset>
             <legend>Bifrost Key</legend>
-            <label for="">PASSWORD</label>
-            <label for="">CONFIRM PASSWORD</label>
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password">
+            <label for="confirm-password">CONFIRM PASSWORD</label>
+            <input type="password" name="confirm-password" id="confirm-password">
           </fieldset>
           <button type="submit">Initiate Ascent</button>
         </form>

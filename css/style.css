@@ -20,14 +20,16 @@ main {
   display: flex;
 }
 
+/* Hero sidebar styling */
 .hero-section {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 35vw;
+  min-width: 30vw;
+  max-width: 4vw;
   height: 100vh;
   /* padding: 2rem; */
-  background-image: url("../assets/images/space-background.jpg");
+  background-image: url("../assets/images/space-background.webp");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -60,6 +62,27 @@ main {
   padding: 1rem;
 }
 
+/* Form sidebar styling */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+  height: 100vh;
+  width: 100%;
+}
+
+.form-header {
+  max-width: 50vw;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 50vw;
+}
+
+/* Link styling */
 a:link {
   color: #7dd3fc;
 }

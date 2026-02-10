@@ -11,6 +11,9 @@
 body {
   /* 4. Add accessible line-height */
   line-height: 1.5;
+
+  /* Adjust  */
+  font-size: 1.2rem;
 }
 
 main {
@@ -41,10 +44,35 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 20vh;
-  background-color: rgb(21, 23, 61, 0.50)
+  background-color: rgba(15, 15, 27, 0.35)
   
 }
 
+.hero-header {
+  font-size: 2.5rem;
+}
+
 .hero-footer {
-  margin: 0 2rem 1.5rem 2rem;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-color: rgba(15, 15, 27, 0.75);
+  padding: 1rem;
+}
+
+a:link {
+  color: #7dd3fc;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  color: #22d3ee;
+}
+
+a:visited {
+  color: #c4b5fd;
+}
+
+a:active {
+  color: #e0f2fe;
 }

@@ -58,6 +58,7 @@
         <div class="form-card">
           <!-- Form CTA  -->
           <h2>Begin the Ascent</h2>
+          <p>Required fields are labeled with *</p>
           <form action="">
             <!--Seeker Designation (personal name) -->
             <fieldset class="form-group">
@@ -69,6 +70,7 @@
                   name="name"
                   id="name"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
               <div class="form-control">
@@ -78,6 +80,7 @@
                   name="last-name"
                   id="last-name"
                   placeholder="Enter your last name"
+                  required
                 />
               </div>
             </fieldset>
@@ -91,6 +94,7 @@
                   name="email"
                   id="email"
                   placeholder="Enter your email"
+                  required
                 />
               </div>
               <div class="form-control">
@@ -100,6 +104,8 @@
                   name="phone-number"
                   id="phone-number"
                   placeholder="Enter your phone number"
+                  pattern="[0-9]*"
+                  required
                 />
               </div>
             </fieldset>
@@ -113,6 +119,7 @@
                   name="password"
                   id="password"
                   placeholder="Enter your password"
+                  required
                 />
               </div>
               <div class="form-control">
@@ -122,6 +129,7 @@
                   name="confirm-password"
                   id="confirm-password"
                   placeholder="Verify your password"
+                  required
                 />
               </div>
             </fieldset>

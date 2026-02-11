@@ -9,7 +9,12 @@
       href="./assets/icons/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="preload" as="image" href="./assets/images/space-background.webp" fetchpriority="high">
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/space-background.webp"
+      fetchpriority="high"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -32,7 +37,10 @@
               >Unsplash</a
             >
           </p>
-          <p>Made with love by John for <a href="https://www.theodinproject.com/">The Odin Project</a></p>
+          <p>
+            Made with love by John for
+            <a href="https://www.theodinproject.com/">The Odin Project</a>
+          </p>
         </footer>
       </section>
       <!-- Form section -->
@@ -52,58 +60,70 @@
           <h2>Begin the Ascent</h2>
           <form action="">
             <!--Seeker Designation (personal name) -->
-            <fieldset>
-              <legend>Seeker Designation</legend>
-              <label for="name">NAME</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Enter your name"
-              />
-              <label for="last-name">LAST NAME</label>
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                placeholder="Enter your last name"
-              />
+            <fieldset class="form-group">
+              <legend class="form-group-title">Seeker Designation</legend>
+              <div class="form-control">
+                <label for="name">NAME</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-control">
+                <label for="last-name">LAST NAME</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Enter your last name"
+                />
+              </div>
             </fieldset>
             <!-- Transmission Link (contact information) -->
-            <fieldset>
-              <legend>Transmission Link</legend>
-              <label for="email">EMAIL</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-              />
-              <label for="phone-number">PHONE NUMBER</label>
-              <input
-                type="tel"
-                name="phone-number"
-                id="phone-number"
-                placeholder="Enter your phone number"
-              />
+            <fieldset class="form-group">
+              <legend class="form-group-title">Transmission Link</legend>
+              <div class="form-control">
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-control">
+                <label for="phone-number">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  placeholder="Enter your phone number"
+                />
+              </div>
             </fieldset>
             <!-- Bifrost Key (passwords) -->
-            <fieldset>
-              <legend>Bifrost Key</legend>
-              <label for="password">PASSWORD</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
-              />
-              <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
-                placeholder="Confirm your password"
-              />
+            <fieldset class="form-group">
+              <legend class="form-group-title">Bifrost Key</legend>
+              <div class="form-control">
+                <label for="password">PASSWORD</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <div class="form-control">
+                <label for="confirm-password">VERIFY PASSWORD</label>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  placeholder="Verify your password"
+                />
+              </div>
             </fieldset>
             <button type="submit">Initiate Ascent</button>
           </form>

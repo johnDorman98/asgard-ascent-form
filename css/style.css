@@ -14,18 +14,18 @@
 /* Default theme styles */
 :root {
   /* Backgrounds */
-  --bg-main: #FAFAFA;         /* Off-White: Clean, crisp, high-contrast base */
+  --bg-main: #fafafa; /* Off-White: Clean, crisp, high-contrast base */
   --bg-card: rgba(240, 244, 248, 0.5); /* Mist Gray: Subtle glass panel */
 
   /* Text & Accents */
-  --text-primary: #6482ad;    /* Denim Blue: Strong contrast for primary text */
-  --text-body: #334E77;
-  --text-muted: #7fa1c3;      /* Slate Blue: Softer HUD legends & placeholders */
-  --text-on-dark: #FAFAFA;    /* Off-White: For headers/footers over the starfield */
+  --text-primary: #6482ad; /* Denim Blue: Strong contrast for primary text */
+  --text-body: #334e77;
+  --text-muted: #7fa1c3; /* Slate Blue: Softer HUD legends & placeholders */
+  --text-on-dark: #fafafa; /* Off-White: For headers/footers over the starfield */
 
   /* Borders & Interactive States */
-  --border-subtle: #7fa1c3;   /* Slate Blue: Clean dividers and input borders */
-  --accent-action: #6482ad;   /* Denim Blue: Active buttons and focus states */
+  --border-subtle: #7fa1c3; /* Slate Blue: Clean dividers and input borders */
+  --accent-action: #4A6FA5; /* Denim Blue: Active buttons and focus states */
   --accent-glow: rgba(127, 161, 195, 0.4); /* Slate Blue tint for focus/hover */
 
   /* Functional Colors */
@@ -41,12 +41,12 @@
   --shadow-sidebar: 10px 0 30px rgba(100, 130, 173, 0.15);
 
   /* Interactive Glows */
-  --shadow-glow: 0 0 12px var(--accent-glow); 
+  --shadow-glow: 0 0 12px var(--accent-glow);
   --shadow-glow-success: 0 0 15px rgba(94, 255, 0, 0.3);
   --shadow-glow-error: 0 0 15px rgba(255, 77, 77, 0.3);
 
   /* Consistent Spacing */
-  --spacing-section: 3rem; 
+  --spacing-section: 3rem;
   --spacing-group: 2rem; /* Slightly increased for better "breathing room" */
 
   /* Glass Effect */
@@ -76,8 +76,8 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 30vw;
-  max-width: 45vw;
+  min-width: 20vw;
+  max-width: 35vw;
   height: 100vh;
   color: var(--text-on-dark);
   background-image: url("../assets/images/space-background.webp");
@@ -108,7 +108,7 @@ main {
   text-align: center;
   color: var(--text-on-dark);
   width: 100%;
-  background-color: rgba(100, 130, 173, 0.7);
+  background-color: rgba(100, 130, 173, 0.8);
   padding: 1rem;
 }
 
@@ -134,7 +134,7 @@ main {
 
 .form-card {
   flex: 0 1 auto;
-  padding: 1rem 3rem 3rem 3rem;
+  padding: 1rem 3rem;
   width: 100%;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-card);
@@ -171,6 +171,13 @@ main {
   margin-bottom: 0.25rem;
 }
 
+/* Add required (*) to labels. */
+.form-group label::after {
+  content: " *";
+  color: var(--error);
+  font-weight: bold;
+}
+
 /* Form control validation styling */
 input[type="text"],
 input[type="email"],
@@ -179,7 +186,7 @@ input[type="password"] {
   border: 2px solid var(--border-subtle);
   border-radius: 10px;
   padding: 0.5rem 0.75rem;
-  box-shadow: 0px 5px 15px var(--shadow-glow);
+  box-shadow: var(--shadow-glow);
 }
 
 input:focus {
@@ -198,45 +205,44 @@ input:user-invalid {
 
 /* Form submit button styling */
 button[type="submit"] {
-  padding: 0.5rem 0.75rem;
-  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
   margin-left: 3rem;
   font-size: 1.2rem;
   border-radius: 10px;
   background-color: var(--accent-action);
   color: var(--text-on-dark);
   border: none;
-  box-shadow: 0px 5px 15px var(--accent-action);
+  box-shadow: 0px 5px 15px var(--shadow-card);
+  transition: all var(--transition-speed);
 }
 
 button[type="submit"]:hover,
 button[type="submit"]:focus {
   cursor: pointer;
-  border: 2px solid var(--accent-action);
+  box-shadow: var(--shadow-glow);
 }
 
-/* Add required (*) to labels. */
-.form-group label::after {
-  content: " *";
-  color: #ff4d4d;
+/* Footer Link styling */
+.hero-footer a:link,
+.hero-footer a:visited {
+  color: var(--text-on-dark);
   font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgba(250, 250, 250, 0.3);
+  text-underline-offset: 4px;
+  transition: all var(--transition-speed);
 }
 
-/* Link styling */
-a:link {
-  color: #7dd3fc;
+.hero-footer a:hover,
+.hero-footer a:focus {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 
-a:focus,
-a:hover {
-  text-decoration: none;
-  color: #22d3ee;
-}
-
-a:visited {
-  color: #c4b5fd;
-}
-
-a:active {
-  color: #e0f2fe;
+.hero-footer a:active {
+  color: var(--accent-glow);
+  text-shadow: none;
 }

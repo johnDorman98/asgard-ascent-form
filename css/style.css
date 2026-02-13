@@ -14,19 +14,20 @@
 /* Default theme styles */
 :root {
   /* Backgrounds */
-  --bg-main: #fafafa; /* Off-White: Clean, crisp, high-contrast base */
-  --bg-card: rgba(240, 244, 248, 0.5); /* Mist Gray: Subtle glass panel */
+  --bg-main: #fafafa;
+  --bg-card: rgba(240, 244, 248, 0.8);
 
   /* Text & Accents */
-  --text-primary: #6482ad; /* Denim Blue: Strong contrast for primary text */
+  --text-primary: #6482ad;
   --text-body: #334e77;
-  --text-muted: #7fa1c3; /* Slate Blue: Softer HUD legends & placeholders */
-  --text-on-dark: #fafafa; /* Off-White: For headers/footers over the starfield */
+  --text-muted: #7fa1c3;
+  --text-on-dark: #fafafa;
 
   /* Borders & Interactive States */
-  --border-subtle: #7fa1c3; /* Slate Blue: Clean dividers and input borders */
-  --accent-action: #4A6FA5; /* Denim Blue: Active buttons and focus states */
-  --accent-glow: rgba(127, 161, 195, 0.4); /* Slate Blue tint for focus/hover */
+  --border-subtle: #7fa1c3;
+  --accent-action: #2a4b7c;
+  --accent-hover: #4a6fa5;
+  --accent-glow: rgba(127, 161, 195, 0.4);
 
   /* Functional Colors */
   --error: #ff4d4d;
@@ -36,8 +37,8 @@
   --radius-main: 12px;
   --transition-speed: 0.3s ease;
 
-  /* Shadows (Updated with Denim Blue @ lowered opacity) */
-  --shadow-card: 0 10px 40px rgba(100, 130, 173, 0.2); /* Softer & wider for light BG */
+  /* Shadows */
+  --shadow-card: 0 10px 40px rgba(100, 130, 173, 0.2);
   --shadow-sidebar: 10px 0 30px rgba(100, 130, 173, 0.15);
 
   /* Interactive Glows */
@@ -47,10 +48,10 @@
 
   /* Consistent Spacing */
   --spacing-section: 3rem;
-  --spacing-group: 2rem; /* Slightly increased for better "breathing room" */
+  --spacing-group: 2rem;
 
   /* Glass Effect */
-  --glass-blur: blur(12px); /* Increased blur for a more premium frosted feel */
+  --glass-blur: blur(12px);
 }
 
 body {
@@ -76,7 +77,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 20vw;
+  min-width: 25vw;
   max-width: 35vw;
   height: 100vh;
   color: var(--text-on-dark);
@@ -85,7 +86,7 @@ main {
   background-position: center;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 15px 0px 50px var(--shadow-sidebar);
+  box-shadow: var(--shadow-sidebar);
 }
 
 .hero-header-wrapper {
@@ -183,9 +184,11 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"] {
+  color: var(--text-primary);
   border: 2px solid var(--border-subtle);
   border-radius: 10px;
   padding: 0.5rem 0.75rem;
+  font-size: 1.1rem;
   box-shadow: var(--shadow-glow);
 }
 
@@ -212,7 +215,7 @@ button[type="submit"] {
   border-radius: 10px;
   background-color: var(--accent-action);
   color: var(--text-on-dark);
-  border: none;
+  border: 2px solid transparent;
   box-shadow: 0px 5px 15px var(--shadow-card);
   transition: all var(--transition-speed);
 }
@@ -220,7 +223,8 @@ button[type="submit"] {
 button[type="submit"]:hover,
 button[type="submit"]:focus {
   cursor: pointer;
-  box-shadow: var(--shadow-glow);
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 15px var(--accent-hover);
 }
 
 /* Footer Link styling */
@@ -245,4 +249,30 @@ button[type="submit"]:focus {
 .hero-footer a:active {
   color: var(--accent-glow);
   text-shadow: none;
+}
+
+/* Dark mode theme based on users preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds */
+    --bg-main: #0b1120;
+    --bg-card: rgba(30, 41, 59, 0.2);
+
+    /* Light text */
+    --text-primary: #f1f5f9;
+    --text-body: #b9cce6;
+    --text-muted: #64748b;
+
+    /* Border for dark mode */
+    --border-subtle: #334155;
+
+    /* Dark mode glows */
+    --accent-action: #1d4ed8;
+    --accent-hover: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.5);
+
+    /* Dark mode adjusted shadows */
+    --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --shadow-sidebar: 15px 0 50px rgba(0, 0, 0, 0.8);
+  }
 }
